@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <style>
+    .product-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .product-details {
+      padding: 20px;
+    }
+    .price {
+      font-size: 1.5rem;
+      color: #e63946;
+      margin-bottom: 20px;
+    }
+    .btn-back {
+      margin-top: 20px;
+    }
+
+    .product-detail{
+    background: linear-gradient(to bottom, rgba(244, 245, 243, 0.7), rgba(255, 255, 254, 0.9));
+}
+
+.product-detail-title{
+    color: black;
+}
+
+.product-detail-body{
+    font-family: var(--main-font);
+    font-size: 1rem;
+    color: black;
+}
+
+#productImages .carousel-item {
+    position: relative;
+    width: 100%;
+    padding-top: 177.77%;  /* 9:16 ratio is equivalent to 9/16 = 0.5625, so 100 / 0.5625 = 177.77% */
+   
+}
+
+#productImages .carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 60%;
+    object-fit: cover;  /* Ensures the image maintains the ratio without distortion */
+    object-position: top; /* Aligns the image to the top */
+    border-radius: 8px;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <!-- Product Image -->
+      <div class="col-md-6">
+        <img src="../images/dress1.jpg" alt="Product Image" class="product-image">
+      </div>
+      <!-- Product Details -->
+      <div class="col-md-6 product-details">
+        <h2>Dark Knight Dress</h2>
+        <p class="price">$150</p>
+        <p>
+          This Dark Knight Dress is an elegant and stylish design, perfect for evening events. Made from high-quality materials, 
+          it ensures both comfort and a sophisticated look.
+        </p>
+        <p>
+          <strong>Features:</strong>
+          <ul>
+            <li>Color: Black</li>
+            <li>Material: Silk blend</li>
+            <li>Size: Customizable</li>
+          </ul>
+        </p>
+        <!-- Add to Basket Button -->
+        <button class="btn btn-primary add-to-basket" data-name="Dark Knight Dress" data-price="150">
+          Add to Basket
+        </button>
+        <!-- Back to Catalog Button -->
+        <a href="catalog.html" class="btn btn-secondary btn-back">Back to Catalog</a>
+      </div>
+    </div>
+  </div>
+  <!-- Include Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
