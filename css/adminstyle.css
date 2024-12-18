@@ -1,0 +1,147 @@
+/* Root Variables */
+:root {
+    --primary-color: #57200e;
+    --font-size: 16px;
+    --main-font: "Playfair Display", serif;
+    --capital-font: "Cormorant SC", serif;   
+}
+
+
+/* Page header styles */
+.page_header {
+    font-family: "Playfair Display", serif;
+}
+
+/* Admin card styles */
+.admin-card {
+    font-family: "Playfair Display", serif;
+    background-color: #f8f9fa; /* Light background */
+    border: 1px solid #dee2e6; /* Subtle border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    padding: 20px;
+    height: 100px; /* Increase height for bigger cards */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Hover effect for admin cards */
+.admin-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Card title and text styles */
+.admin-card .card-title {
+    font-size: 1.5rem; /* Larger title font size */
+    font-weight: bold;
+    color: #333; /* Darker text color */
+    margin-bottom: 10px;
+}
+
+.admin-card .card-text {
+    font-size: 1.2rem; /* Slightly larger text */
+    color: #555; /* Muted text color */
+}
+
+/* Body and footer styles */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0; /* Remove default margin */
+}
+
+main {
+    flex-grow: 1; /* Allow main content to grow and push the footer down */
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-family:var(--capital-font);
+}
+
+/* Table row font */
+tr {
+    font-family: "Playfair Display", serif;
+    font-style: bold;
+}
+
+/* Primary button customization */
+.btn-primary {
+    font-family: "Playfair Display", serif;
+    background-color: #1D1F0E;
+}
+
+/* Navbar customization */
+.custom-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Dimmed background */
+    padding: 10px 0; /* Optional padding for spacing */
+}
+/* Modal Styling for Product entry */
+/* Custom modal styling */
+.modal-content {
+    border-radius: 10px; /* Rounded corners for the modal */
+    padding: 20px;
+}
+
+.modal-header {
+    font-family:var(--capital-font);
+    color: #795e1e; /* White text */
+    border-bottom: 1px solid #ccc;
+}
+
+.modal-title {
+    font-weight: bold;
+}
+
+.modal-body {
+    font-family:var(--main-font) ;
+    padding: 20px;
+}
+
+.form-control {
+    border-radius: 5px; /* Rounded inputs */
+    padding: 10px;
+}
+
+.form-control-file {
+    padding: 5px;
+}
+
+button.close {
+    color: #fff;
+    opacity: 1;
+}
+
+button.close:hover {
+    color: #ffcc00; /* Yellow hover effect */
+}
+
+/* Custom text for file input */
+.form-text {
+    font-size: 12px;
+    color: #6c757d;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.measurements-titles{
+    font-family: var(--capital-font);
+}
+
+.measurements-label{
+    font-family: var(--main-font);
+}

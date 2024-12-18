@@ -1,0 +1,597 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Cormorant+SC:wght@300;400;500;600;700&family=Quicksand:wght@460&family=Rubik:wght@300..900&display=swap');
+
+/* Root Variables */
+:root {
+    --primary-color: #57200e;
+    --dark-green:#242612;
+    --light-green:#282a20;
+    --wine: #2b1919;
+    --font-size: 16px;
+    --main-font: "Playfair Display", serif;
+    --capital-font: "Cormorant SC", serif;   
+}
+
+.headers {
+    font-family: var(--main-font);
+    color: rgb(1, 1, 1);
+}
+
+/* Claudia Logo Styles */
+.logo-main {
+    font-family: var(--main-font);
+    font-size: 100pt;
+}
+
+.tagline {
+    font-family: var(--main-font);
+    font-size: 1.5rem;
+    opacity: 0.8;
+    color: white;
+}
+
+.logo-small {
+    font-size: 30pt;
+}
+
+/* Hero Section Styling */
+#hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    color: rgb(9, 9, 9);
+    margin: 0;
+}
+
+/* Hero Overlay for text visibility */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.hero-button-1{
+    color: white;
+    margin-right: 30px;
+    background-color: var(--wine);
+    font-family: var(--capital-font);
+} 
+
+.hero-button-2{
+    color: white;
+    background-color: #0c1c31;
+    font-family: var(--capital-font);
+} 
+
+.hero-buttons .btn:hover,
+.hero-buttons .btn:focus {
+    background-color: #886f0c; /* Set your desired hover color */
+    box-shadow: none; /* Remove any box-shadow on hover/focus */
+    color: white; /* Ensure the text color stays consistent on hover */
+    border: none;
+    border-color: #d4cb92;
+
+}
+
+.hero-buttons .btn:focus {
+    box-shadow: none !important; /* Remove outline-style focus box */
+    border-color: transparent !important; /* Override focus border */
+}
+
+
+.hero-buttons {
+    margin-top: 50px; /* Add some space between the tagline and the buttons */
+
+}
+
+/* Hero Overlay Text */
+.hero-overlay-text {
+    font-family: var(--main-font);
+    color: white;
+    font-size: 10vw;
+    text-align: center;
+    opacity: 0.8;
+}
+
+/* Hero Gallery (Images in Columns) */
+.hero-gallery {
+    display: flex;
+    height: 100%;
+}
+
+.hero-gallery-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-gallery-column img {
+    width: 100%;
+    height: 25%;
+    object-fit: cover;
+}
+
+
+.brown-button{
+    background-color: #b26e43;
+    border-radius: 5px;
+    color: white;
+}
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero-gallery {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .hero-gallery-column {
+        height: 100vh;
+    }
+    
+    .hero-gallery-column img {
+        height: 25%;
+    }
+}
+
+/* Navbar Styles */
+.main-navbar {
+    background-color: var(--primary-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    font-family: var(--capital-font);
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.navbar-brand:hover {
+    color: #be7532;
+}
+
+
+
+
+/* Navbar Links */
+.nav-link {
+    font-family: var(--capital-font);
+    color: #000;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.active1{
+    color: #be7532;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #b26e43;
+    text-decoration: none;
+}
+
+/* Navbar Collapse Styling */
+.navbar-collapse {
+    padding: 10px 0;
+}
+
+/* Toggler Icon (Hamburger Menu) */
+.navbar-toggler-icon {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* Kente Fabric Strip*/
+.kente-strip {
+    width: 100%;
+    height: 10px; /* Adjust the thickness of the strip */
+    background-image: url('../images/kente_strip.jpg'); /* Replace with the path to your Kente fabric image */
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.section-title{
+    font-family: var(--main-font);;
+}
+
+.about-section {
+    background: linear-gradient(to bottom, #ffffff, #f8f9fa); /* Soft gradient background */
+    padding: 50px 20px;
+    font-family: var(--main-font);
+    color: var(--primary-color);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-family: var(--capital-font);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.about-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.about-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px;
+    gap: 15px;
+}
+
+.about-gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.about-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fits without distortion */
+    transition: transform 0.3s ease;
+}
+
+.about-gallery-item.large {
+    grid-column: span 2; /* Spans across two columns */
+    grid-row: span 2; /* Spans across two rows */
+}
+
+.about-gallery-item.medium {
+    grid-row: span 2; /* Taller images */
+}
+
+.about-gallery-item.small {
+    grid-column: span 1; /* Regular size */
+    grid-row: span 1; /* Regular size */
+}
+
+.about-gallery-item:hover img {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr; /* Stacks text and gallery vertically */
+    }
+
+    .about-gallery {
+        grid-template-columns: repeat(2, 1fr); /* Adjusts gallery to smaller screens */
+    }
+}
+
+
+.catalog-section {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.catalog-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    text-align: center;
+    
+}
+
+.catalog-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 434px;
+    object-fit: cover;
+    
+}
+
+.catalog-item p {
+    font-family: "Quicksand", sans-serif;
+    color: #333;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.catalog-item:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Featured Collection Section */
+.featuredcollection  {
+    background: linear-gradient(to bottom, rgba(29, 31, 14, 0.7), rgba(29, 31, 14, 0.9)), url('images/featured-bg.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 60px 0;
+}
+
+/* Title for Featured Collection */
+.featuredcollection .section-title {
+    font-family: var(--main-font);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Catalog Gallery for Featured Collection */
+.featuredcollection .catalog-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 0 15px;
+}
+
+/* Catalog Item */
+.featuredcollection .catalog-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* Video styling for the catalog */
+.featuredcollection .catalog-item video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Fallback Image styling */
+.featuredcollection .catalog-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Catalog Item Caption */
+.featuredcollection .catalog-item p {
+    font-family: var(--capital-font);
+    font-size: 1rem;
+    color: #1D1F0E; /* Using the primary color */
+    margin-top: 10px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+/* Hover Effects on Videos */
+.featuredcollection .catalog-item:hover video {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .featuredcollection .catalog-gallery {
+        grid-template-columns: 1fr; /* Stack items on smaller screens */
+    }
+}
+
+.contact-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.contact-section .section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+}
+
+.contact-form .form-group label {
+    font-family: var(--capital-font);
+    color: #333;
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.contact-form .btn-primary {
+    background-color: #1D1F0E;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.contact-form .btn-primary:hover {
+    background-color: #245c08;
+}
+
+.footer {
+    background-color: #1D1F0E;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+}
+
+.forgot-password-section{
+    position: relative;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.forgot-password-section::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(224, 209, 209,0.6); /* Dark overlay */
+    z-index: 1;
+}
+
+.forgot-password-section .container {
+    position: relative;
+    z-index: 2; /* Make sure the form content is above the overlay */
+}
+
+/* General card styling */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Image styling: allocate more height for image */
+.card-img-top {
+    height: 300px; /* Increased height for the image */
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Center text and add spacing below the image */
+.card-body {
+    padding: 2px;
+    text-align: center; /* Center-align text for a cleaner look */
+}
+
+/* Spacing for heading and paragraph */
+.card-title {
+    font-family: var(--capital-font);
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+.card-text {
+    font-family: var(--main-font);
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+}
+
+/* Button styling */
+.add-to-basket {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+/* Responsive grid margins */
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+/* Heading Styling */
+h2 {
+    font-family: var(--main-font);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+}
+
+h3 {
+    font-family: var(--main-font);
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+}
+
+
+/* Custom margin for small devices */
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.product-detail{
+    background: linear-gradient(to bottom, rgba(244, 245, 243, 0.7), rgba(255, 255, 254, 0.9));
+}
+
+.product-detail-title{
+    color: black;
+}
+
+.product-detail-body{
+    font-family: var(--main-font);
+    font-size: 1rem;
+    color: black;
+}
+
+#productImages .carousel-item {
+    position: relative;
+    width: 100%;
+   padding-top: 177.77%;   /* 9:16 ratio is equivalent to 9/16 = 0.5625, so 100 / 0.5625 = 177.77%  */
+}
+
+#productImages .carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 60%;
+    object-fit: cover;  /* Ensures the image maintains the ratio without distortion */
+    object-position: top; /* Aligns the image to the top */
+    border-radius: 8px;
+}
+
+
+
+/* Responsive Navbar */
+@media (max-width: 992px) {
+    .navbar-collapse {
+        background-color: #f8f9fa;
+    }
+    .nav-link {
+        color: #000;
+    }
+}
+
+
+/* Optional - Center everything for smaller devices */
+@media (max-width: 576px) {
+    .forgot-password-section {
+        padding: 10px;
+    }
+    .login-side {
+        padding: 15px;
+    }
+}
+
